@@ -1,0 +1,35 @@
+{
+  "extensionName": {
+    "message": "Bunpro Checker"
+  },
+  "extensionDescription": {
+    "message": "Zeigt ein Icon mit der Anzahl ausstehender Bunpro.jp-Reviews an"
+  },
+  "contextMenu_checkNow": {
+    "message": "Jetzt prüfen"
+  },
+  "options_title": {
+    "message": "Bunpro Checker Optionen"
+  },
+  "options_bunproApiKeyLabel": {
+    "message": "API-Key"
+  },
+  "options_bunproApiKeyPlaceholder": {
+    "message": "API-Key"
+  },
+  "options_intervalLabel": {
+    "message": "Prüf-Intervall (in Minuten)"
+  },
+  "options_intervalPlaceholder": {
+    "message": "Prüf-Intervall"
+  },
+  "options_save": {
+    "message": "Einstellungen speichern"
+  },
+  "options_saveSuccess": {
+    "message": "Einstellungen gespeichert!"
+  },
+  "options_saveFail": {
+    "message": "Speichern fehlgeschlagen"
+  }
+}

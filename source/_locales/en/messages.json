@@ -1,0 +1,39 @@
+{
+  "extensionName": {
+    "message": "Bunpro Checker"
+  },
+  "extensionDescription": {
+    "message": "Shows an icon with the number of Bunpro.jp reviews that still need to be done"
+  },
+  "contextMenu_checkNow": {
+    "message": "Check now"
+  },
+  "badge_error": {
+    "message": "ERR",
+    "description": "Error badge, should be fewer than three characters"
+  },
+  "options_title": {
+    "message": "Bunpro Checker Options"
+  },
+  "options_bunproApiKeyLabel": {
+    "message": "API Key"
+  },
+  "options_bunproApiKeyPlaceholder": {
+    "message": "API Key"
+  },
+  "options_intervalLabel": {
+    "message": "Update interval (minutes)"
+  },
+  "options_intervalPlaceholder": {
+    "message": "Check interval"
+  },
+  "options_save": {
+    "message": "Save settings"
+  },
+  "options_saveSuccess": {
+    "message": "Settings saved!"
+  },
+  "options_saveFail": {
+    "message": "Saving failed"
+  }
+}
