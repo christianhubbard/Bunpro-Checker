@@ -13,7 +13,7 @@ const bunproCheckerOptions = () => {
     saveSuccess: chrome.i18n.getMessage('options_saveSuccess'),
     saveFail: chrome.i18n.getMessage('options_saveFail'),
   };
-  
+
   const HTML = {
     title: document.getElementById('title'),
     api_key: document.getElementById('api_key'),
@@ -83,14 +83,15 @@ const bunproCheckerOptions = () => {
       }
     }
 
-    chrome.storage.sync.set(userOptions)
-      .then(() => {
-        setMessage('success', i18n.saveSuccess);
-        chrome.runtime.sendMessage('init');
-      })
-      .catch(() => setMessage('failure', i18n.saveFail));
+    try {
+      chrome.storage.sync.set(userOptions);
+      setMessage('success', i18n.saveSuccess);
+      chrome.runtime.sendMessage('init');
+    } catch (err) {
+      setMessage('failure', i18n.saveFail);
+    }
   };
-    
+
   const init = async () => {
     localize();
     restoreOptions();

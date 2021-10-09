@@ -5,7 +5,7 @@ with the number of reviews that still need to be done.
 
 ## Setup
 
-1. Install the extension: [Chrome Web Store](https://chrome.google.com/webstore/detail/kdmajdephakcakeldepipjhdabgccoja)
+1. Install the extension: [Chrome Web Store](https://chrome.google.com/webstore/detail/kdmajdephakcakeldepipjhdabgccoja), [Microsoft Edge Add-Ons](https://microsoftedge.microsoft.com/addons/detail/bunpro-checker/pidjoaoepkdbipppfldfbbellceokjbp)
 2. Open the extension's preferences page from the extensions manager and set
    your [Bunpro API key](https://www.bunpro.jp/settings/api). Make the toolbar icon visible if you want to see the
    number of unread items.
