@@ -4,7 +4,7 @@
   "name": "__MSG_extensionName__",
   "description": "__MSG_extensionDescription__",
   "author": "Andreas Bielawski",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "icons": {
     "16": "icons/16.png",
     "32": "icons/32.png",
@@ -14,7 +14,8 @@
     "256": "icons/256.png"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "build/service_worker.js",
+    "type": "module"
   },
   "action": {
     "default_icon": {
@@ -30,12 +31,6 @@
     "open_in_tab": true,
     "page": "options/options.html"
   },
-  "permissions": [
-    "alarms",
-    "contextMenus",
-    "storage"
-  ],
-  "host_permissions": [
-    "https://bunpro.jp/api/user/*/study_queue"
-  ]
+  "permissions": ["alarms", "contextMenus", "storage"],
+  "host_permissions": ["https://bunpro.jp/api/user/*/study_queue"]
 }

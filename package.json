@@ -1,27 +1,32 @@
 {
   "name": "bunpro-checker",
-  "version": "1.0.0",
   "description": "Shows an icon with the number of Bunpro.jp reviews that still need to be done",
+  "version": "1.1.0",
+  "author": "Brawl345",
+  "license": "Unlicense",
   "repository": {
     "url": "https://github.com/Brawl345/Bunpro-Checker"
   },
+  "main": "source/service_worker.js",
+  "type": "module",
   "scripts": {
-    "build": "web-ext build --overwrite-dest",
-    "start:edge-beta": "web-ext run -t chromium --chromium-binary \"C:\\Program Files (x86)\\Microsoft\\Edge Beta\\Application\\msedge.exe\" --start-url=https://www.example.com",
-    "lint": "web-ext lint",
-    "check-dependencies": "npm-check --skip-unused"
-  },
-  "keywords": [
-    "browser",
-    "webextension"
-  ],
-  "author": "Brawl345",
-  "license": "Unlicense",
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "web-ext": "^6.4.0"
+    "dev": "node esbuild.js",
+    "start:chrome": "web-ext run -t chromium",
+    "build": "cross-env NODE_ENV=\"production\" node esbuild.js && web-ext build --overwrite-dest",
+    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
+    "web-ext-lint": "cross-env NODE_ENV=\"production\" node esbuild.js && web-ext lint"
   },
   "webExt": {
-    "sourceDir": "./source/"
+    "sourceDir": "./public/"
+  },
+  "devDependencies": {
+    "chrome-types": "0.1.73",
+    "cross-env": "7.0.3",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "esbuild": "0.14.1",
+    "prettier": "2.5.0",
+    "web-ext": "6.6.0"
   }
 }
