@@ -54,7 +54,8 @@ export const checkBunpro = async () => {
   try {
     const response = await fetch(api_url);
     body = await response.json();
-  } catch (err) {
+  } catch (error) {
+    console.error(error);
     setBadge(BADGE_COLORS.FAILURE, i18n.badge_error);
     return;
   }

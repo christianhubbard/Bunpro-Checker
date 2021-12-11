@@ -13,11 +13,11 @@ const i18n = {
 };
 
 const HTML = {
-  title: document.getElementById('title'),
-  apiKey: document.getElementById('apiKey'),
-  interval: document.getElementById('interval'),
-  save: document.getElementById('save'),
-  message: document.getElementById('message'),
+  title: document.querySelector('#title'),
+  apiKey: document.querySelector('#apiKey'),
+  interval: document.querySelector('#interval'),
+  save: document.querySelector('#save'),
+  message: document.querySelector('#message'),
 };
 
 const clearMessage = () => {
@@ -57,7 +57,7 @@ const saveOptions = async (event) => {
         userOptions[key] = htmlElement.checked;
         break;
       case 'number':
-        userOptions[key] = parseInt(htmlElement.value);
+        userOptions[key] = Number.parseInt(htmlElement.value);
         break;
       default:
         userOptions[key] = htmlElement.value;
@@ -67,7 +67,7 @@ const saveOptions = async (event) => {
   try {
     await chrome.storage.sync.set(userOptions);
     setMessage('success', i18n.saveSuccess);
-  } catch (err) {
+  } catch {
     setMessage('failure', i18n.saveFail);
   }
 };

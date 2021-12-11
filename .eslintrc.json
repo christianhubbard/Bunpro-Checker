@@ -6,7 +6,8 @@
     "serviceworker": true,
     "webextensions": true
   },
-  "extends": ["eslint:recommended", "prettier"],
+  "extends": ["eslint:recommended", "plugin:unicorn/recommended", "prettier"],
+  "plugins": ["unicorn"],
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module",
@@ -18,6 +19,7 @@
     "consistent-return": "error",
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "linebreak-style": ["error", "unix"],
+    "no-console": ["error", { "allow": ["error"] }],
     "quotes": ["error", "single"],
     "semi": ["error", "always"]
   }

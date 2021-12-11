@@ -3,7 +3,7 @@ import {
   onClickIcon,
   onInstalled,
   setupAlarm,
-} from './service_worker_functions.js';
+} from './service-worker-functions.js';
 import { getOptions } from './storage.js';
 
 chrome.runtime.onInstalled.addListener(onInstalled);
