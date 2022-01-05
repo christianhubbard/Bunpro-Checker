@@ -3,6 +3,4 @@ export const defaults = {
   interval: 5,
 };
 
-export const getOptions = async () => {
-  return chrome.storage.sync.get(defaults);
-};
+export const getOptions = async () => chrome.storage.sync.get(defaults);
