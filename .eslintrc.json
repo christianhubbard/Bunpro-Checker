@@ -16,6 +16,7 @@
     }
   },
   "rules": {
+    "arrow-body-style": "error",
     "consistent-return": "error",
     "indent": [
       "error",
@@ -31,6 +32,9 @@
         "allow": ["error"]
       }
     ],
+    "no-var": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-const": "error",
     "prefer-template": "error",
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
