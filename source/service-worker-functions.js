@@ -2,13 +2,9 @@ import { getOptions } from './storage.js';
 
 const BUNPRO_REVIEW_URI = 'https://www.bunpro.jp/study';
 
-// TODO: getMessage() is not supported in MV3: https://github.com/w3c/webextensions/issues/93
-// Hardcode these for now...
 export const i18n = {
-  // contextMenu_checkNow: chrome.i18n.getMessage('contextMenu_checkNow'),
-  // badge_error: chrome.i18n.getMessage('badge_error'),
-  contextMenu_checkNow: 'Check now',
-  badge_error: 'ERR',
+  contextMenu_checkNow: chrome.i18n.getMessage('contextMenu_checkNow'),
+  badge_error: chrome.i18n.getMessage('badge_error'),
 };
 
 export const BADGE_COLORS = {
