@@ -1,6 +1,6 @@
 import { getOptions } from './storage.js';
 
-const BUNPRO_REVIEW_URI = 'https://www.bunpro.jp/study';
+const BUNPRO_REVIEW_URI = 'https://www.bunpro.jp/reviews';
 
 export const i18n = {
   contextMenu_checkNow: chrome.i18n.getMessage('contextMenu_checkNow'),
